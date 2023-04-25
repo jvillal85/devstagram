@@ -7,10 +7,10 @@
 @section('contenido')
     <div class="md:flex md:justify-center md:gap-10 md:items-center">
         <div class="md:w-6/12 p-5">
-            <img src="{{asset('img/registrar.jpg')}}" alt="imagend e registor de usuario">
+            <img src="{{asset('img/registrar.jpg')}}" alt="imagen de registor de usuario">
         </div>
         <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">
-            <form action="{{route('register')}}" method="POST" novalidate>
+            <form action="{{route('register.index')}}" method="POST" novalidate>
                 @csrf
                 <div class="mb-5">
                     <label for="name" class="mb-2 block uppercase text-gray-500 font-bold"> Nombre </label>
