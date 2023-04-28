@@ -9,7 +9,11 @@ class AccountRescueController extends Controller
 {
     //acceder a vista para recuperar cuenta
     public function index(){
-        return view('auth.accountRescue');
+        if(!auth()){
+            return view('auth.accountRescue');
+        }
+        //
+        dd('Recuperar cuenta..');
     }
 
     public function store(){
