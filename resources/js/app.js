@@ -4,7 +4,7 @@ Dropzone.autoDiscover = false;
 
 const dropzone = new Dropzone('#dropzone', {
     dictDefaultMessage: "Sube aqui tu imagen",
-    acceptedFiles: '.PNG, .JPG, .JPEG, .GIF',
+    acceptedFiles: ".png, .jpg, .jpeg, .gif",
     addRemoveLinks: true,
     dictRemoveFile: 'Borrar archivos',
     maxFiles: 1,
@@ -24,10 +24,11 @@ const dropzone = new Dropzone('#dropzone', {
     }
 });
 
-dropzone.on('success', function (file, response) {
-    document.querySelector('[name="imagen"]').value = response.imagen;
-});
 
-dropzone.on('removedfile', function () {
-    document.querySelector('[name="imagen"]').value = "";
+dropzone.on('success',function(file,response){
+    document.querySelector('[name="imagen"]').value=response.imagen;
+})
+
+dropzone.on('removedfile',function(){
+    document.querySelector('[name="imagen"]').value="";
 });
